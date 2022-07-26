@@ -1,0 +1,73 @@
+Script started on 2022-07-08 14:23:09+03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="162" LINES="30"]
+]0;antti@LAPTOP-KLAGED5S: ~/part12-containers-applications[01;32mantti@LAPTOP-KLAGED5S[00m:[01;34m~/part12-containers-applications[00m$ docker ls [K[K[Kcontae[Kiner ls-[K -a
+CONTAINER ID   IMAGE            COMMAND                  CREATED      STATUS                    PORTS                     NAMES
+47ecc7b01721   mongo            "docker-entrypoint.s…"   4 days ago   Up 12 minutes             0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+d44c971d33c0   express-server   "docker-entrypoint.s…"   4 days ago   Exited (137) 4 days ago                             todo-backend-app-1
+c90f76825165   f04374c4b2f0     "docker-entrypoint.s…"   4 days ago   Exited (137) 4 days ago                             eloquent_zhukovsky
+0034f2c22101   ubuntu           "bash"                   6 days ago   Exited (0) 6 days ago                               epic_meitner
+cb228d14ca4a   hello-world      "/hello"                 6 days ago   Exited (0) 6 days ago                               amazing_wilbur
+292fecbbcf54   hello-world      "/hello"                 6 days ago   Exited (0) 6 days ago                               awesome_murdock
+]0;antti@LAPTOP-KLAGED5S: ~/part12-containers-applications[01;32mantti@LAPTOP-KLAGED5S[00m:[01;34m~/part12-containers-applications[00m$ docker exec -it todo-backend-mongo-1 bash
+root@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# [Kroot@47ecc7b01721:/# mongo -u root -p example
+MongoDB shell version v5.0.9
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("864d8f12-da47-4387-afe4-0d80b53101fc") }
+MongoDB server version: 5.0.9
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+	https://community.mongodb.com
+---
+The server generated these startup warnings when booting: 
+        2022-07-08T11:11:06.778+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2022-07-08T11:11:07.507+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs[3G[Jshow dbs[11G
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+the_database  0.000GB
+> use the_database[3G[Juse the_database[19G
+switched to db the_database
+> show collections[3G[Jshow collections[19G
+todos
+> db [3G[Jdb[5G.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("62c24bdf4da6734b07345cc7"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("62c24bdf4da6734b07345cc8"), "text" : "Learn about containers", "done" : false }
+> db.todos.inserO[3G[Jdb.todos.inser[17GtOne(/[3G[Jdb.todos.insertOne([22G{"text": "Increase the number of toolsi[3G[Jdb.todos.insertOne({"text": "Increase the number of tools[60G in my toolt[3G[Jdb.todos.insertOne({"text": "Increase the number of tools in my tool[71Gbelt", s[3G[Jdb.todos.insertOne({"text": "Increase the number of tools in my toolbelt", [78G"done" : false})[3G[Jdb.todos.insertOne({"text": "Increase the number of tools in my toolbelt", "done" : false})[94G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("62c8147bc25453f2107ce7fb")
+}
+> db.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("62c24bdf4da6734b07345cc7"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("62c24bdf4da6734b07345cc8"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("62c8147bc25453f2107ce7fb"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> exit[3G[Jexit[7G
+bye
+root@47ecc7b01721:/# exit
+exit
+]0;antti@LAPTOP-KLAGED5S: ~/part12-containers-applications[01;32mantti@LAPTOP-KLAGED5S[00m:[01;34m~/part12-containers-applications[00m$ eixt[K[K[Kxit
+exit
+
+Script done on 2022-07-08 14:27:38+03:00 [COMMAND_EXIT_CODE="0"]

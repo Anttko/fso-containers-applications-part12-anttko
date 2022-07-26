@@ -1,0 +1,42 @@
+Script started on 2022-07-02 04:43:07+03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="120" LINES="30"]
+]0;antti@LAPTOP-KLAGED5S: ~[01;32mantti@LAPTOP-KLAGED5S[00m:[01;34m~[00m$ docker-container run hello-world
+docker-container: command not found
+]0;antti@LAPTOP-KLAGED5S: ~[01;32mantti@LAPTOP-KLAGED5S[00m:[01;34m~[00m$ docker-container run hello-world[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kdocker-container run hello-world[1P[1@ 
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+]0;antti@LAPTOP-KLAGED5S: ~[01;32mantti@LAPTOP-KLAGED5S[00m:[01;34m~[00m$ docker run -it ubuntu bash
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2K405f018f9d1d: Pulling fs layer [1B[1A[2K405f018f9d1d: Downloading [>                                                  ]  311.3kB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [=>                                                 ]  941.3kB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [===>                                               ]  1.875MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [====>                                              ]  2.809MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [======>                                            ]  4.049MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [========>                                          ]  5.299MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [==========>                                        ]  6.232MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [===========>                                       ]  7.162MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [============>                                      ]  7.473MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [=============>                                     ]  8.403MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [==============>                                    ]  8.715MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [===============>                                   ]  9.648MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [================>                                  ]  10.27MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [=================>                                 ]  10.89MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [===================>                               ]  12.14MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [=====================>                             ]  13.38MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [=======================>                           ]  14.32MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [=========================>                         ]  15.26MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [=========================>                         ]  15.58MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [==========================>                        ]   16.2MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [===========================>                       ]  16.82MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [=============================>                     ]  17.75MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [==============================>                    ]  18.38MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [===============================>                   ]  19.01MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [================================>                  ]  19.94MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [==================================>                ]  21.19MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [====================================>              ]  22.13MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [====================================>              ]  22.44MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [======================================>            ]  23.37MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [======================================>            ]  23.68MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [========================================>          ]  24.63MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [==========================================>        ]  25.57MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [==========================================>        ]  25.88MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [============================================>      ]  26.81MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [============================================>      ]  27.13MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [==============================================>    ]  28.05MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [==============================================>    ]  28.36MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading [================================================>  ]   29.3MB/30.42MB[1B[1A[2K405f018f9d1d: Verifying Checksum [1B[1A[2K405f018f9d1d: Download complete [1B[1A[2K405f018f9d1d: Extracting [>                                                  ]  327.7kB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [========>                                          ]  4.915MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [==============>                                    ]  8.847MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [======================>                            ]  13.43MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [==============================>                    ]  18.68MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [======================================>            ]  23.59MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [===========================================>       ]  26.54MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [=================================================> ]  29.82MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting [==================================================>]  30.42MB/30.42MB[1B[1A[2K405f018f9d1d: Pull complete [1BDigest: sha256:b6b83d3c331794420340093eb706a6f152d9c1fa51b262d9bf34594887c2c7ac
+Status: Downloaded newer image for ubuntu:latest
+[?2004h]0;root@0034f2c22101: /root@0034f2c22101:/# [K]0;root@0034f2c22101: /root@0034f2c22101:/# mkdir /usr/src/app
+[?2004l[?2004h]0;root@0034f2c22101: /root@0034f2c22101:/# vim /usr/serc   rc/app/index.js
+[?2004lbash: vim: command not found
+[?2004h]0;root@0034f2c22101: /root@0034f2c22101:/# vim /usr/src/app/index.jsvim[1P[1P[1P[1@t[1@o[1@u[1@c[1@h
+[?2004l[?2004h]0;root@0034f2c22101: /root@0034f2c22101:/# [Kexit
+[?2004lexit
+]0;antti@LAPTOP-KLAGED5S: ~[01;32mantti@LAPTOP-KLAGED5S[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2022-07-02 04:45:57+03:00 [COMMAND_EXIT_CODE="0"]

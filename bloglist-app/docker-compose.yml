@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy-bloglist
+    depends_on:
+      - "bloglist-front"
+      - "bloglist-back"
+  bloglist-back: 
+    image: bloglist-backend
+    build:
+      context: ./bloglist-backend
+    volumes: 
+      - ./bloglist-backend:/usr/src/app
+    container_name: bloglist-backend
+    ports:
+      - 3003:3003
+    environment:
+      - MONGODB_URI= ""
+      - PORT= ""
+      - TEST_MONGODB_URI=""
+      - SECRET= ""
+  bloglist-front:
+    image: bloglist-frontend
+    build:
+      context: ./bloglist-frontend
+    volumes:
+      - ./bloglist-frontend:/usr/src/app 
+    container_name: bloglist-frontend
